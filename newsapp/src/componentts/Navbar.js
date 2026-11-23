@@ -12,7 +12,7 @@ export default class
     <button className="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon" aria-hidden="true"></span>
     </button>
-    <dialog className="drawer drawer-end" tabindex="-1" id="navbarNav" aria-labelledby="navbarNavLabel">
+    <dialog className="drawer drawer-end" tabIndex="-1" id="navbarNav" aria-labelledby="navbarNavLabel">
       <div className="drawer-header">
         <h5 className="drawer-title" id="navbarNavLabel">Menu</h5>
         <button type="button" className="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
