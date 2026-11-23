@@ -1,14 +1,16 @@
+import Navbar from "./componentts/Navbar";
+import News from "./componentts/News";
 
 import React, { Component } from 'react'
 
 export default class App extends Component {
-
-
-  //object
-  name="Radha"
+  
   render() {
     return (
-      <div>App {this.name}</div>
-    )
+      <div>
+        <Navbar/>
+        <News/>
+      </div>
+    );
   }
 }
