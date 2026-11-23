@@ -7,10 +7,20 @@ export  class News extends Component {
       <div className="container">
         <h1> NewsApp -Top Headlines</h1>
         
+        <div className="row">
+          <div className="col-md-3">
         <NewsItems title="mytitle" description="myRadhaRaman"/>
+        </div>
+        <div className="col-md-3">
         <NewsItems title="mytitle" description="myRadhaRaman"/>
-        <NewsItems  title="mytitle" description="myRadhaRaman"/>
-        <NewsItems  title="mytitle" description="myRadhaRaman"/>
+        </div>
+        <div className="col-md-3">
+        <NewsItems title="mytitle" description="myRadhaRaman"/>
+        </div>
+        <div className="col-md-3">
+        <NewsItems title="mytitle" description="myRadhaRaman"/>
+        </div>
+        </div>
         </div>
 
     );
