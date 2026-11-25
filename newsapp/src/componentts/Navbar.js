@@ -1,14 +1,14 @@
 
 import React, { Component } from 'react'
 
-export default class
+export default class Navbar
  extends Component {
   render() {
     return (
       <div>
         <nav className="navbar md:navbar-expand bg-1">
       <div className="container-fluid">
-    <a className="navbar-brand" href="#">Navbar</a>
+    <a className="navbar-brand" href="/">Navbar</a>
     <button className="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarDrawer" aria-controls="navbarDrawer" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon" aria-hidden="true"></span>
     </button>

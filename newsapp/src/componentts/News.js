@@ -12,8 +12,19 @@ export default class News extends Component {
 
     this.state = {
       articles: this.articles,
-      loading: false
+      loading: false,
+      page:1,
     };
+  }
+
+  async componentDidMount(){
+    console.log("inside the CDM");
+    let url="https://newsapi.org/v2/top-headlines?country=us&apiKey=227268948d704452ac2de8dcb3b38275";
+    let data=await fetch(url);
+    let parseData=data.json();
+    console.log(parseData);
+    this.setState({articles:parseData.articles})
+
   }
 
   render() {
@@ -21,20 +32,24 @@ export default class News extends Component {
       <div className="container my-4">
         <h1>NewsApp - Top Headlines</h1>
 
-        <div className="row">
-          {this.state.articles.map((element, index) => {
+        <div className="row ">
+          {this.state.articles.map((element) => {
             return (
-              <div className="col-md-3 mb-4" key={element.url}>
-                <NewsItems
+              <div className="col-md-4" key={element.url}> 
+              <NewsItems
+                  
                   title={element.title.slice(0,40)}
-                  description={element.description.slice(0,40)}
-                  imageUrl={element.urlToImage.slice(0,40)}
-                  newsUrl={element.url.slice(0,40)}
+                  description={element.description?.slice(0,80) || ""}
+                  imageUrl={element.urlToImage}
+                  newsUrl={element.url}
                 />
               </div>
             );
           })}
         </div>
+        <button type="button" class="btn-solid theme-primary">Primary</button>
+        <button type="button" class="btn-solid theme-primary">Primary</button>
+
       </div>
     );
   }
