@@ -9,7 +9,7 @@ NewsItems extends Component {
       <div>
         
         <section className="card" style={{width: "320px"}}>
-          <img src={imageUrl} className="card-img-top" alt="..."/>
+          <img src={imageUrl || "default-image.jpg"} className="card-img-top" alt="..."/>
           <div className="card-body">
             <h4 className="card-title">{title}...</h4>
             <p className="card-text">{description}...</p>
