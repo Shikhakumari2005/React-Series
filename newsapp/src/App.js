@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Navbar from "./componentts/Navbar";
 import News from "./componentts/News";
-import {BrowserRouter ,Router ,Route} from "react-router-dom";
+import {BrowserRouter ,Routes ,Route} from "react-router-dom";
 
 export default class App extends Component {
   
@@ -11,9 +11,9 @@ export default class App extends Component {
 
         <BrowserRouter>
           <Navbar/>
-          <Router>
+          <Routes>
 
-              <Route  exact  path="/general" element={<News key="general" pageSize={5} country="in"  category="general"/>}/>
+              <Route    path="/" element={<News key="general" pageSize={5} country="in"  category="general"/>}/>
               
               <Route exact path="/business" element={<News key="business" pageSize={5} country="in"  category="business"/>}/>
               
@@ -27,7 +27,7 @@ export default class App extends Component {
               <Route  exact path="/sports" element={<News key="sports" pageSize={5} country="in"  category="sports"/>}/>
 
           
-          </Router>
+          </Routes>
           </BrowserRouter>
         {/* <News pageSize={5} country="in"  category="general"/> */}
         
